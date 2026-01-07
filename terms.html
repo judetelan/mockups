@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - CallView AI</title>
+    <meta name="description"
+        content="Terms of Service for CallView, the human-in-the-loop AI voice platform by TPH Business Consultancy Services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff0f7',
+                            100: '#ffe3f1',
+                            200: '#ffc7e3',
+                            300: '#ff9bc9',
+                            400: '#ff5da6',
+                            500: '#ff0080',
+                            600: '#e6006c',
+                            700: '#cc0058',
+                            800: '#a80548',
+                            900: '#8c093f',
+                        },
+                        slate: {
+                            850: '#15202e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(255, 0, 128, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body
+    class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-white dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528264dbb1b357c29f522f.png"
+                            alt="CallView" class="h-10 block dark:hidden">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-10 hidden dark:block">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="solutions.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Solutions</a>
+                    <a href="features.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Features</a>
+                    <a href="pricing.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Pricing</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">About</a>
+                    <a href="faq.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">FAQ</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="login.html"
+                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary-600">Login</a>
+                    <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                        class="bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap">
+                        Book Demo
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-700 dark:text-white hover:text-primary-500 p-2 focus:outline-none">
+                        <i class="ph ph-list text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl md:hidden animate-fade-in-down h-[calc(100vh-80px)] overflow-y-auto pb-20 z-50">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Home</a>
+                <a href="solutions.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Solutions</a>
+                <a href="features.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Features</a>
+                <a href="pricing.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Pricing</a>
+                <a href="about.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">About</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">FAQ</a>
+                <hr class="border-slate-100 dark:border-slate-800 my-2">
+                <a href="login.html"
+                    class="block px-4 py-3 text-lg font-medium text-slate-600 dark:text-slate-400">Login</a>
+                <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                    class="block px-4 py-3 bg-primary-600 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-500/30">Book
+                    Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900 pt-32 lg:pt-48">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">
+                Terms of Service
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">Last updated: December 2025</p>
+        </div>
+    </section>
+    <!-- Intensive Terms Content -->
+    <section class="py-20 bg-white dark:bg-slate-950">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="prose prose-slate dark:prose-invert max-w-none">
+
+                <div class="border-b border-slate-200 dark:border-slate-800 pb-8 mb-12">
+                    <p class="text-sm font-mono text-slate-500 dark:text-slate-400 mb-2">LAST UPDATED: JANUARY 08, 2026
+                    </p>
+                    <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Master Terms of Service</h1>
+                    <p
+                        class="bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300 p-4 rounded text-sm italic border border-red-200 dark:border-red-800">
+                        <strong>IMPORTANT NOTICE:</strong> THIS AGREEMENT CONTAINS A BINDING ARBITRATION PROVISION AND
+                        CLASS ACTION WAIVER. IT ALSO CONTAINS CLAUSES THAT SIGNIFICANTLY LIMIT OUR LIABILITY TO YOU IN
+                        THE EVENT OF A SECURITY INCIDENT OR "HACKING" EVENT. PLEASE READ CAREFULLY.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 1: DEFINITIONS -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 1: Definitions & Intepretation</h2>
+                    <div class="grid gap-4 text-sm text-slate-600 dark:text-slate-400">
+                        <p><strong>1.1 "Account Owner"</strong> means the specific individual or entity who registered
+                            for the Service and holds the primary administrative credentials. The Account Owner is
+                            legally responsible for all actions taken by Authorized Users.</p>
+                        <p><strong>1.2 "Authorized User"</strong> means an individual natural person, whether an
+                            employee, business partner, contractor, or agent of Customer, who is registered or permitted
+                            by Customer to use the Service.</p>
+                        <p><strong>1.3 "Service"</strong> means the CallView AI SaaS platform, accessible via
+                            https://app.callview.ai, intended solely for B2B outbound sales and coaching ("Intended
+                            Use").</p>
+                        <p><strong>1.4 "Customer Data"</strong> means all electronic data, audio, commissions, or other
+                            materials submitted to the Service by You.</p>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 2: ACCOUNT SECURITY & RESPONSIBILITY -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 2: Account Security & Owner Responsibility</h2>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">2.1 Account Owner Liability
+                    </h3>
+                    <p class="mb-4">
+                        The Account Owner is solely responsible for maintaining the confidentiality of the account
+                        credentials (username, password, API keys). <strong>You accept full responsibility for all
+                            activities that occur under your Account</strong>, whether or not you authorized such
+                        activities. Company assumes that any person using your credentials has the authority to bind
+                        you.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">2.2 Security Breaches</h3>
+                    <p class="mb-4">
+                        You agree to notify Company immediately of any unauthorized use of your account or any other
+                        breach of security. Company will not be liable for any loss that you may incur as a result of
+                        someone else using your password or account, either with or without your knowledge. However, you
+                        could be held liable for losses incurred by Company or another party due to someone else using
+                        your account.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 3: LICENSE & ACCEPTABLE USE -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 3: License & Acceptable Use</h2>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">3.1 Intended Use</h3>
+                    <p class="mb-4">
+                        Company grants Customer a limited, revocable license to use the Service solely for its Intended
+                        Use: legitimate B2B sales acceleration, coaching, and telemarketing in compliance with all laws.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">3.2 Prohibited Acts</h3>
+                    <p class="mb-4">Customer shall not:</p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4 text-sm">
+                        <li>Use the Service for any illegal purpose, including fraud, harassment, or "swatting";</li>
+                        <li>Attempt to interfere with, compromise the system integrity or security, or decipher any
+                            transmissions to or from the servers running the Service;</li>
+                        <li>Take any action that imposes, or may impose at our sole discretion an unreasonable or
+                            disproportionately large load on our infrastructure;</li>
+                        <li>Upload invalid data, viruses, worms, or other software agents through the Service;</li>
+                        <li>Impersonate another person or otherwise misrepresent your affiliation with a person or
+                            entity, conducting fraud, hiding or attempting to hide your identity.</li>
+                    </ul>
+
+                    <div class="bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500 p-4 mb-4">
+                        <h4 class="text-indigo-800 dark:text-indigo-300 font-bold uppercase text-sm mb-1">3.3 Strict
+                            Non-Cloning & Anti-Competition</h4>
+                        <p class="text-indigo-900 dark:text-indigo-200 text-sm">
+                            <strong>YOU ARE EXPRESSLY PROHIBITED FROM COPYING, CLONING, OR IMITATING THE
+                                PLATFORM.</strong><br>
+                            You may not accesses the Service for purposes of monitoring its availability, performance or
+                            functionality, or for any other benchmarking or competitive purposes. You shall not copy,
+                            modify, create derivative works of, reverse engineer, decompile, or otherwise attempt to
+                            extract the source code or "look and feel" of the Service. Any attempt to replicate the UI,
+                            UX, or underlying logic of CallView AI for a competing product will be prosecuted to the
+                            fullest extent of the law.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 4: TELEPHONY & COMPLIANCE -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 4: Telephony & Regulatory Compliance</h2>
+
+                    <div
+                        class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-6 rounded-lg mb-6">
+                        <p class="font-bold text-red-800 dark:text-red-400 uppercase text-sm mb-2">Strict Liability
+                            Warning</p>
+                        <p class="text-red-700 dark:text-red-300 text-sm">
+                            Customer assumes extensive legal compliance obligations. You agree to indemnify Company
+                            fully for any fines, penalties, or damages resulting from your violation of TCPA, TSR, or
+                            State Telemarketing Laws.
+                        </p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">4.1 TCPA & TSR Compliance</h3>
+                    <p class="mb-4">
+                        Customer is solely responsible for ensuring its campaigns comply with the Telephone Consumer
+                        Protection Act (TCPA) and Telemarketing Sales Rule (TSR). This includes maintaining internal
+                        Do-Not-Call lists, honoring DNC requests immediately, and adhering to calling curfew hours.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 5: FEES & PAYMENT (STRIPE) -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 5: Fees & Payment Terms</h2>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">5.1 Payment Processing
+                        (Stripe)</h3>
+                    <p class="mb-4">
+                        We use <strong>Stripe, Inc.</strong> ("Stripe") as our third-party payment processor. By using
+                        the Service, you agree to be bound by Stripe’s <a
+                            href="https://stripe.com/us/connect-account/legal" target="_blank"
+                            class="text-primary-600 underline">Connected Account Agreement</a>. You authorize us to
+                        share your payment information with Stripe. <strong>Company does not store your credit card
+                            information on its servers</strong> and is not liable for the security of your payment
+                        details processed by Stripe.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">5.2 Non-Refundable</h3>
+                    <p class="mb-4">
+                        ALL FEES ARE NON-REFUNDABLE. You acknowledge that we incur costs to provision infrastructure for
+                        your account immediately upon signup. There are no refunds for partial months, unused minutes,
+                        or service downtime unless explicitly guaranteed in a separate SLA.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 6: INTELLECTUAL PROPERTY -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 6: Intellectual Property</h2>
+                    <p class="mb-4">
+                        You retain ownership of your Data. We retain ownership of the Platform, including all
+                        algorithms, "Model Weights," and "Platform Intelligence."
+                    </p>
+                </div>
+
+                <!-- ARTICLE 7: INDEMNIFICATION -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 7: Indemnification</h2>
+                    <p class="mb-4">
+                        Customer shall defend, indemnify, and hold harmless Company from any claims arising out of: (a)
+                        Your use of the Service; (b) Your violation of any law (including TCPA/TSR); or (c) any claim
+                        that Your Content infringes the rights of a third party.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 8: LIMITATION OF LIABILITY & HACKING IMMUNITY -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 8: Limitation of Liability & Disclaimers</h2>
+
+                    <div
+                        class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded border border-slate-200 dark:border-slate-800">
+                        <p class="mb-4 uppercase font-bold text-sm">8.1 "As Is" / "As Available"</p>
+                        <p class="mb-4 text-sm">
+                            THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. COMPANY DISCLAIMS ALL
+                            WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+                            PURPOSE.
+                        </p>
+
+                        <p class="mb-4 uppercase font-bold text-sm text-red-600 dark:text-red-400">8.2 Cyber Security &
+                            Hacking Waiver</p>
+                        <p class="mb-4 text-sm font-semibold">
+                            YOU ACKNOWLEDGE THAT THE SERVICE IS INTERNET-BASED AND SUBJECT TO RISKS INHERENT TO THE
+                            INTERNET. COMPANY SHALL NOT BE LIABLE FOR ANY DAMAGES, LOSS OF DATA, OR LOSS OF PROFITS
+                            RESULTING FROM: (A) HACKING, TAMPERING, OR OTHER UNAUTHORIZED ACCESS OR USE OF THE SERVICE
+                            OR YOUR ACCOUNT; (B) DOSS ATTACKS, RANSOMWARE, OR VIRUSES; (C) BUGS, ERRORS, OR INACCURACIES
+                            IN THE SERVICE.
+                        </p>
+
+                        <p class="mb-4 uppercase font-bold text-sm">8.3 Liability Cap</p>
+                        <p class="text-sm">
+                            IN NO EVENT SHALL THE AGGREGATE LIABILITY OF COMPANY EXCEED THE GREATER OF: (A) THE AMOUNT
+                            PAID BY YOU TO COMPANY IN THE 6 MONTHS PRIOR TO THE ACTION GIVING RISE TO LIABILITY; OR (B)
+                            $100.00 USD.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 9: DISPUTE RESOLUTION -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 9: Governing Law & Dispute Resolution</h2>
+                    <p class="mb-4">
+                        <strong>9.1 Governing Law.</strong> Delaware Law governs this Agreement.
+                    </p>
+                    <p class="mb-4">
+                        <strong>9.2 Arbitration.</strong> All disputes must be resolved via binding arbitration in
+                        Wilmington, Delaware. <strong>NO CLASS ACTIONS.</strong>
+                    </p>
+                </div>
+
+                <!-- ARTICLE 10: GENERAL PROVISIONS -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 10: General Provisions</h2>
+                    <p class="mb-4">
+                        <strong>10.1 Severability.</strong> If any provision of this Agreement is held by a court of
+                        competent jurisdiction to be contrary to law, the provision will be deemed null and void, and
+                        the remaining provisions of this Agreement will remain in effect.
+                    </p>
+                    <p class="mb-4">
+                        <strong>10.2 Entire Agreement.</strong> This Agreement, including all Order Forms, constitutes
+                        the entire agreement between the parties and supersedes all prior and contemporaneous
+                        agreements, proposals, or representations, written or oral, concerning its subject matter.
+                    </p>
+                    <p class="mb-4">
+                        <strong>10.3 AI Development Disclosure.</strong> Customer acknowledges that portions of the
+                        Service's source code and architecture may have been generated with the assistance of Artificial
+                        Intelligence coding tools. Company represents that it holds valid title or license to the output
+                        of such tools, but disclaims any warranty that such AI-generated code is free from non-material
+                        errors or non-infringement of third-party rights not discoverable by standard industry due
+                        diligence.
+                    </p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="mt-20 border-t border-slate-200 dark:border-slate-800 pt-10">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Legal Notices</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-2">
+                        Legal notices:
+                    </p>
+                    <p class="font-mono text-primary-600 dark:text-primary-400">legal@callview.ai</p>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-8 mb-4 md:mb-0">
+                    </div>
+                    <p class="text-sm">The Human-in-the-Loop AI Voice Platform.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-primary-400">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400">Pricing</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+                        <li><a href="partner-program.html" class="hover:text-primary-400">Partner Program</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary-400">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-sm flex justify-between items-center">
+                <span>&copy; 2026 CallView AI. All rights reserved.</span>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/callview" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-linkedin-logo text-xl hover:text-white cursor-pointer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="69419ea219ffe9ae99e11be8">
+        </script>
+</body>
+
+</html>

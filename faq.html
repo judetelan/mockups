@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallView FAQ - Common Questions About Our AI Voice Platform</title>
+    <meta name="description"
+        content="Find answers to common questions about CallView's human-in-the-loop AI voice platform, pricing, features, compliance, and setup.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff0f7',
+                            100: '#ffe3f1',
+                            200: '#ffc7e3',
+                            300: '#ff9bc9',
+                            400: '#ff5da6',
+                            500: '#ff0080',
+                            600: '#e6006c',
+                            700: '#cc0058',
+                            800: '#a80548',
+                            900: '#8c093f',
+                        },
+                        slate: {
+                            850: '#15202e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(255, 0, 128, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body
+    class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-white dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528264dbb1b357c29f522f.png"
+                            alt="CallView" class="h-10 block dark:hidden">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-10 hidden dark:block">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="solutions.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Solutions</a>
+                    <a href="features.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Features</a>
+                    <a href="pricing.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Pricing</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">About</a>
+                    <a href="faq.html"
+                        class="text-sm font-medium text-primary-600 dark:text-primary-500 transition">FAQ</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="login.html"
+                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary-600">Login</a>
+                    <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                        class="bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap">
+                        Book Demo
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-700 dark:text-white hover:text-primary-500 p-2 focus:outline-none">
+                        <i class="ph ph-list text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl md:hidden animate-fade-in-down h-[calc(100vh-80px)] overflow-y-auto pb-20 z-50">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Home</a>
+                <a href="solutions.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Solutions</a>
+                <a href="features.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Features</a>
+                <a href="pricing.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Pricing</a>
+                <a href="about.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">About</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-primary-600 dark:text-primary-500 bg-primary-50 dark:bg-primary-900/10 transition">FAQ</a>
+                <hr class="border-slate-100 dark:border-slate-800 my-2">
+                <a href="login.html"
+                    class="block px-4 py-3 text-lg font-medium text-slate-600 dark:text-slate-400">Login</a>
+                <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                    class="block px-4 py-3 bg-primary-600 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-500/30">Book
+                    Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-slate-900">
+        <div
+            class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-primary-100/50 dark:bg-primary-900/20 rounded-full blur-3xl opacity-60 translate-x-1/3 -translate-y-1/4">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1
+                class="text-4xl md:text-6xl font-display font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-8">
+                Frequently Asked Questions
+            </h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-0 leading-relaxed">
+                Everything you need to know about CallView's human-in-the-loop AI voice platform
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-20 bg-white dark:bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- General Questions -->
+            <div class="mb-16">
+                <h2
+                    class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    General Questions</h2>
+                <div class="space-y-4">
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What is CallView?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">CallView is a
+                            human-in-the-loop AI voice platform that lets your SDRs supervise and coach AI-powered sales
+                            calls in real-time. Think of it as giving your best SDR the ability to run 500+
+                            conversations a day while maintaining full control. The AI handles the dialing and initial
+                            conversation, but humans can whisper suggestions, see live transcripts, or take over any
+                            call seamlessly.</p>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How is CallView different from other AI voice dialers?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">Most AI voice platforms are "set and forget" - you configure the AI and hope
+                                it doesn't embarrass your brand. CallView is fundamentally different:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li><strong>Live Coaching Console:</strong> See every conversation in real-time with
+                                    transcription and sentiment analysis</li>
+                                <li><strong>Whisper Mode:</strong> Suggest phrases to the AI mid-conversation without
+                                    the prospect hearing</li>
+                                <li><strong>Seamless Takeover:</strong> Jump into any call seamlessly when you spot
+                                    opportunity</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What industries does CallView work for?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">CallView works for any B2B company with outbound sales needs. Our top
+                                industries include:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li>HVAC & Home Services</li>
+                                <li>Commercial Solar</li>
+                                <li>Roofing Contractors</li>
+                                <li>Lead Generation Agencies</li>
+                                <li>Wealth Management & Financial Services</li>
+                                <li>IT Services & MSPs</li>
+                                <li>Real Estate (Developers & Brokers)</li>
+                                <li>Accounting & CPA Firms</li>
+                                <li>B2B SaaS Companies</li>
+                            </ul>
+                            <p>See our <a href="solutions.html" class="text-primary-600 hover:underline">solutions
+                                    page</a> for industry-specific use cases.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Pricing & Plans -->
+            <div class="mb-16">
+                <h2
+                    class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    Pricing & Plans</h2>
+                <div class="space-y-4">
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How much does CallView cost?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">CallView offers simple per-user pricing:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>Starter:</strong> $500/user/month for teams of 1-15 users. One-time $500
+                                    setup fee per user (normally $800).</li>
+                                <li><strong>Enterprise:</strong> Custom pricing for larger teams (15+ users). Includes
+                                    volume discounts, custom integrations, and a dedicated account team.</li>
+                                <li><strong>AI + Human Loop:</strong> Custom pricing for our fully managed solution.
+                                    Includes the CallView platform plus Philippines-based remote SDRs who operate the
+                                    system for you.</li>
+                            </ul>
+                            <p>No hidden fees, no per-call charges. See our <a href="pricing.html"
+                                    class="text-primary-600 hover:underline">pricing page</a> for the full breakdown.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What's included in the setup fee?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">The one-time $500 per user setup fee (normally $800) covers everything you
+                                need to go live:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>Platform Configuration:</strong> Full setup of your CallView account and
+                                    permissions</li>
+                                <li><strong>AI Training:</strong> Your scripts, objection handlers, and industry
+                                    knowledge are loaded</li>
+                                <li><strong>CRM Integration:</strong> Full sync with ServiceTitan, HubSpot, Salesforce,
+                                    or your existing CRM</li>
+                                <li><strong>Team Onboarding:</strong> Complete system training for your entire team</li>
+                                <li><strong>Dedicated Success Manager:</strong> Your own Client Success Manager to
+                                    ensure smooth onboarding</li>
+                            </ul>
+                            <p>Enterprise clients receive custom onboarding packages tailored to their needs.</p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            Can I cancel anytime?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Yes! CallView is
+                            month-to-month after the initial setup. You can cancel anytime with 30 days notice. We're
+                            confident you'll see ROI and stay, but we don't lock you into long-term contracts.</p>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            Is there a free trial?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Instead of a free trial, we
+                            offer a live demo with your actual scripts. You'll see the AI make real calls (to test
+                            numbers) while you supervise from the coaching console. This gives you a much better sense
+                            of how CallView works than a generic trial. <a
+                                href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                                class="text-primary-600 hover:underline">Book your demo</a> to see it in action.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Setup & Implementation -->
+            <div class="mb-16">
+                <h2
+                    class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    Setup & Implementation</h2>
+                <div class="space-y-4">
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How long does setup take?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">2 weeks from signup to go-live. Here's the typical timeline:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>Week 1:</strong> Script programming, AI training on your objection handlers
+                                </li>
+                                <li><strong>Week 2:</strong> CRM integration, team training, test calls, QA, and go-live
+                                </li>
+                            </ul>
+                            <p>Your team's involvement is minimal - mostly providing scripts, answering questions about
+                                your sales process, and reviewing test calls.</p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What CRMs do you integrate with?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">CallView integrates with major CRMs including:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li>ServiceTitan (HVAC, Plumbing, Electrical)</li>
+                                <li>HubSpot</li>
+                                <li>Salesforce</li>
+                                <li>Pipedrive</li>
+                                <li>GoHighLevel</li>
+                                <li>Close.io</li>
+                                <li>Custom CRMs via API</li>
+                            </ul>
+                            <p>Integration typically takes 5 minutes with pre-built connectors. All call data,
+                                transcripts, and outcomes sync automatically to your CRM.</p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            Do you train my team?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">Yes! Training is included in the setup fee. We provide comprehensive
+                                onboarding for your SDRs, teaching them:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li>How to use the Live Coaching Console</li>
+                                <li>When and how to whisper suggestions to the AI</li>
+                                <li>How to take over calls seamlessly</li>
+                                <li>Reading sentiment indicators and transcripts</li>
+                                <li>Reviewing analytics and optimizing performance</li>
+                            </ul>
+                            <p>Most SDRs are comfortable coaching AI calls within the first day.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- AI & Technology -->
+            <div class="mb-16">
+                <h2
+                    class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    AI & Technology</h2>
+                <div class="space-y-4">
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            Will the AI sound robotic?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">No. CallView uses voice
+                            cloning technology to replicate your top SDR's voice from just 30 seconds of audio. The AI
+                            sounds exactly like your best performer - with natural inflection, pacing, and warmth.
+                            Prospects consistently report they can't tell they're speaking with AI until we reveal it.
+                        </p>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How does voice cloning work?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">During setup, you record a
+                            30-second sample of your top SDR speaking naturally (we provide the script). Our AI analyzes
+                            the voice characteristics - tone, pace, inflection patterns - and creates a digital voice
+                            model. This model powers all AI calls, making every conversation sound like your best rep is
+                            on the line.</p>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What if the AI says something wrong?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">This is exactly why CallView is human-in-the-loop, not autonomous. Your SDRs
+                                watch every conversation in real-time via the coaching console. If the AI goes
+                                off-script or mishandles an objection, your SDR can:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>Whisper:</strong> Type a suggestion the AI will incorporate naturally</li>
+                                <li><strong>Override:</strong> Replace the AI's next response entirely</li>
+                                <li><strong>Takeover:</strong> Seamlessly step into the call as a human</li>
+                            </ul>
+                            <p>You're always in control. The AI amplifies your team - it doesn't replace your judgment.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How does the AI handle objections?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">We train the AI on your
+                            specific objection handlers using our ABQ framework (Acknowledge, Bridge, Question). During
+                            setup, we load all your common objections and responses. The AI learns how your team handles
+                            "We already have a vendor," "Not interested," "Send me an email," and dozens of other
+                            scenarios. Your SDRs can also whisper suggestions for unusual objections in real-time.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Compliance & Security -->
+            <div class="mb-16">
+                <h2
+                    class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    Compliance & Security</h2>
+                <div class="space-y-4">
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            Is CallView TCPA compliant?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">Yes. CallView is built for TCPA compliance from the ground up:</p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li><strong>Calling Hours:</strong> Automatic enforcement of 8am-9pm local time
+                                    restrictions</li>
+                                <li><strong>DNC Scrubbing:</strong> All lists are scrubbed against the National Do Not
+                                    Call Registry before dialing</li>
+                                <li><strong>Human Oversight:</strong> Every call has human supervision, satisfying
+                                    "reasonable efforts" requirements</li>
+                                <li><strong>Consent Verification:</strong> AI confirms opt-in status before proceeding
+                                    with sales conversations</li>
+                                <li><strong>Call Recording Disclosure:</strong> Automatic disclosure where required by
+                                    state law</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            Is my data secure?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">Absolutely. CallView uses enterprise-grade security:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li>All data encrypted in transit (TLS 1.3) and at rest (AES-256)</li>
+                                <li>SOC 2 Type II compliant infrastructure</li>
+                                <li>Call recordings stored securely with access controls</li>
+                                <li>Regular security audits and penetration testing</li>
+                                <li>GDPR-compliant data handling for international prospects</li>
+                            </ul>
+                            <p>See our <a href="privacy.html" class="text-primary-600 hover:underline">privacy
+                                    policy</a> for complete details.</p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What about industry-specific compliance (SEC, FINRA, HIPAA)?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">CallView supports industry-specific compliance needs:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>Financial Services:</strong> SEC/FINRA-compliant scripts with required
+                                    disclosures and no performance guarantees</li>
+                                <li><strong>Healthcare:</strong> HIPAA-aware handling for healthcare-adjacent services
+                                </li>
+                                <li><strong>Real Estate:</strong> Fair Housing Act compliant messaging</li>
+                            </ul>
+                            <p>We work with your compliance team during setup to ensure all scripts meet regulatory
+                                requirements.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Results & Performance -->
+            <div class="mb-16">
+                <h2
+                    class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    Results & Performance</h2>
+                <div class="space-y-4">
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            What results can I expect?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">Typical CallView customers see:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>10x call volume:</strong> From 50 calls/day to 500+ with the same team size
+                                </li>
+                                <li><strong>3-5x more conversations:</strong> AI handles gatekeepers and voicemails,
+                                    humans close deals</li>
+                                <li><strong>2x meeting conversion:</strong> Consistent messaging + real-time coaching =
+                                    better outcomes</li>
+                                <li><strong>40% cost reduction:</strong> Fewer SDRs needed for the same pipeline</li>
+                            </ul>
+                            <p>Results vary by industry and call complexity. Book a demo to discuss benchmarks for your
+                                specific use case.</p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How do you measure ROI?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p class="mb-3">CallView provides detailed analytics on every metric that matters:</p>
+                            <ul class="list-disc pl-6 space-y-2 mb-3">
+                                <li><strong>Calls Made:</strong> Total dials, connections, and conversations</li>
+                                <li><strong>Meeting Conversion:</strong> Meetings booked per conversation</li>
+                                <li><strong>AI vs Human:</strong> Which calls were AI-only vs human-coached</li>
+                                <li><strong>Cost per Meeting:</strong> Your blended cost compared to pure SDR approach
+                                </li>
+                                <li><strong>Pipeline Impact:</strong> Opportunities and revenue generated</li>
+                            </ul>
+                            <p>Most customers see positive ROI within the first month.</p>
+                        </div>
+                    </details>
+
+                    <details
+                        class="group bg-slate-50 dark:bg-slate-900 rounded-xl p-6 cursor-pointer border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center text-lg font-semibold text-slate-900 dark:text-white">
+                            How many calls can the AI make per day?
+                            <span class="transition group-open:rotate-180">
+                                <i class="ph ph-caret-down"></i>
+                            </span>
+                        </summary>
+                        <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">Each AI agent can handle
+                            approximately 100-150 calls per day depending on conversation length. A typical team of 5 AI
+                            agents can make 500-750 calls daily. Unlike human SDRs, AI agents don't take breaks, get
+                            tired, or have off days - they deliver consistent performance from the first call to the
+                            last.</p>
+                    </details>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-900/30 rounded-full blur-[100px]">
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                Still Have Questions?
+            </h2>
+            <p class="text-xl mb-12 text-slate-300">
+                Book a demo and we'll answer everything live. See the coaching console, hear the AI voice, and discuss
+                your specific use case.
+            </p>
+            <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                class="inline-block bg-primary-600 hover:bg-primary-500 text-white font-bold py-4 px-12 rounded-xl shadow-glow transition-all hover:-translate-y-1 text-lg">
+                Book Your Free Demo
+            </a>
+            <p class="mt-6 text-slate-400">Or email us at <a href="mailto:emil@callview.ai"
+                    class="underline hover:text-white">emil@callview.ai</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-8 mb-4 md:mb-0">
+                    </div>
+                    <p class="text-sm">The Human-in-the-Loop AI Voice Platform.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-primary-400">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400">Pricing</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+                        <li><a href="partner-program.html" class="hover:text-primary-400">Partner Program</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary-400">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-sm flex justify-between items-center">
+                <span>&copy; 2026 CallView AI. All rights reserved.</span>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/callview" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-linkedin-logo text-xl hover:text-white cursor-pointer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="69419ea219ffe9ae99e11be8">
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - CallView | Simple, Per-User Pricing</title>
+    <meta name="description"
+        content="CallView pricing: $500/user/month. No hidden fees. Enterprise pricing available. Includes platform access and free training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff0f7',
+                            100: '#ffe3f1',
+                            200: '#ffc7e3',
+                            300: '#ff9bc9',
+                            400: '#ff5da6',
+                            500: '#ff0080',  /* HOT PINK CORE */
+                            600: '#e6006c',
+                            700: '#cc0058',
+                            800: '#a80548',
+                            900: '#8c093f',
+                        },
+                        slate: {
+                            850: '#15202e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(255, 0, 128, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body
+    class="bg-white dark:bg-slate-900 dark:bg-slate-950 text-slate-900 dark:text-white dark:text-white font-sans antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-white dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528264dbb1b357c29f522f.png"
+                            alt="CallView" class="h-10 block dark:hidden">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-10 hidden dark:block">
+                    </a>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="solutions.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Solutions</a>
+                    <a href="features.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Features</a>
+                    <a href="pricing.html" class="text-sm font-medium text-primary-600 transition">Pricing</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">About</a>
+                    <a href="faq.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">FAQ</a>
+                </div>
+                <!-- CTA -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="login.html" class="text-sm font-semibold text-slate-700 hover:text-primary-600">Login</a>
+                    <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                        class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        Book Demo
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-700 hover:text-primary-500 p-2 focus:outline-none">
+                        <i class="ph ph-list text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl md:hidden animate-fade-in-down h-[calc(100vh-80px)] overflow-y-auto pb-20 z-50">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">Home</a>
+                <a href="solutions.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">Solutions</a>
+                <a href="features.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">Features</a>
+                <a href="pricing.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-primary-600 bg-primary-50 dark:bg-slate-800 transition">Pricing</a>
+                <a href="about.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">About</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">FAQ</a>
+                <hr class="border-slate-100 dark:border-slate-800 my-2">
+                <a href="login.html"
+                    class="block px-4 py-3 text-lg font-medium text-slate-600 dark:text-slate-400">Login</a>
+                <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                    class="block px-4 py-3 bg-primary-600 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-500/30">Book
+                    Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+                Simple, <span class="text-primary-600">Per-User</span> Pricing
+            </h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                No per-minute fees. No hidden costs. Just straightforward pricing that scales with your growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="py-20 bg-white dark:bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Toggle (Monthly/Yearly) Placeholder -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-slate-100 p-1 rounded-full inline-flex items-center">
+                    <span
+                        class="px-6 py-2 rounded-full bg-white dark:bg-slate-900 shadow-sm text-sm font-semibold text-slate-900 dark:text-white">Monthly</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Card -->
+                <div
+                    class="relative bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 hover:border-primary-200 hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white mb-2">Starter</h3>
+                    <p class="text-slate-500 mb-6 h-10">Perfect for small teams getting started.</p>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-4xl font-bold text-slate-900 dark:text-white">$500</span>
+                        <span class="text-slate-500">/user/mo</span>
+                    </div>
+
+                    <a href="#"
+                        class="block w-full py-3 px-6 bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 text-slate-900 dark:text-white font-semibold rounded-lg text-center transition mb-8 border border-slate-200 dark:border-slate-800">Get
+                        Started</a>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>1-15 Users</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>Full Platform Access</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>Free System Training</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>Discounted Setup Fee ($500)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Card (Highlighted) -->
+                <div
+                    class="relative bg-slate-900 rounded-2xl p-8 shadow-2xl shadow-primary-500/20 border border-slate-800 scale-105 z-10">
+                    <div
+                        class="absolute top-0 right-0 bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        POPULAR</div>
+                    <h3 class="text-2xl font-bold font-display text-white mb-2">Enterprise</h3>
+                    <p class="text-slate-400 mb-6 h-10">For scaling sales organizations.</p>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-4xl font-bold text-white">Custom</span>
+                    </div>
+
+                    <a href="#"
+                        class="block w-full py-3 px-6 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg text-center transition mb-8 shadow-lg shadow-primary-600/30">Contact
+                        Sales</a>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-300 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-400 text-lg"></i>
+                            <span>15+ Users</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-400 text-lg"></i>
+                            <span>Everything in Starter</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-400 text-lg"></i>
+                            <span>Volume Discounts</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-400 text-lg"></i>
+                            <span>Dedicated Success Manager</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-300 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-400 text-lg"></i>
+                            <span>Custom Integrations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Managed Service Card -->
+                <div
+                    class="relative bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 hover:border-primary-200 hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white mb-2">AI + Human Loop</h3>
+                    <p class="text-slate-500 mb-6 h-10">We handle the operations.</p>
+                    <div class="flex items-baseline gap-1 mb-8">
+                        <span class="text-4xl font-bold text-slate-900 dark:text-white">Custom</span>
+                    </div>
+
+                    <a href="#"
+                        class="block w-full py-3 px-6 bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 text-slate-900 dark:text-white font-semibold rounded-lg text-center transition mb-8 border border-slate-200 dark:border-slate-800">Talk
+                        to Us</a>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>Platform + Remote SDRs</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>Fully Managed Operations</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-lg"></i>
+                            <span>Hiring & Training Included</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-950" id="roi-calculator">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 border border-green-200 text-green-700 text-sm font-medium mb-4">
+                    <i class="ph-fill ph-calculator"></i> Savings Estimator
+                </div>
+                <h2 class="text-3xl font-bold font-display text-slate-900 dark:text-white mb-4">Calculate Your ROI</h2>
+                <p class="text-slate-600 dark:text-slate-400">See how much you save by switching from traditional SDRs
+                    to CallView AI
+                    agents.</p>
+            </div>
+
+            <div
+                class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row gap-10 items-center">
+                <!-- Inputs -->
+                <div class="flex-1 space-y-8">
+                    <!-- Slider 1 -->
+                    <div>
+                        <div class="flex justify-between mb-4">
+                            <label class="font-semibold text-slate-700 flex items-center gap-2">
+                                <i class="ph-fill ph-users text-primary-500"></i> Team Size (SDRs)
+                            </label>
+                            <span class="text-primary-600 font-bold bg-primary-50 px-3 py-1 rounded-lg"
+                                id="sdr-display">5 SDRs</span>
+                        </div>
+                        <input type="range" id="sdr-input" min="1" max="50" step="1"
+                            class="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-primary-500 hover:accent-primary-600 transition-all border border-slate-200 dark:border-slate-800"
+                            value="5">
+                        <div class="flex justify-between text-xs text-slate-400 mt-2 font-medium">
+                            <span>1 SDR</span>
+                            <span>50 SDRs</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2 -->
+                    <div>
+                        <div class="flex justify-between mb-4">
+                            <label class="font-semibold text-slate-700 flex items-center gap-2">
+                                <i class="ph-fill ph-phone-call text-primary-500"></i> Outsourced / Hiring Cost
+                                <span class="group relative">
+                                    <i
+                                        class="ph-fill ph-info text-slate-400 hover:text-primary-500 cursor-help transition-colors"></i>
+                                    <span
+                                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-slate-800 text-white text-xs p-2 rounded hidden group-hover:block text-center z-10">Avg
+                                        monthly cost per SDR (salary + overhead)</span>
+                                </span>
+                            </label>
+                            <span class="text-primary-600 font-bold bg-primary-50 px-3 py-1 rounded-lg"
+                                id="salary-display">$4,000/mo</span>
+                        </div>
+                        <input type="range" id="salary-input" min="3000" max="8000" step="500"
+                            class="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-primary-500 hover:accent-primary-600 transition-all border border-slate-200 dark:border-slate-800"
+                            value="4000">
+                        <div class="flex justify-between text-xs text-slate-400 mt-2 font-medium">
+                            <span>$3k (Offshore)</span>
+                            <span>$8k (US-Based)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="hidden md:block w-px h-64 bg-slate-100"></div>
+
+                <!-- Results -->
+                <div
+                    class="mt-8 md:mt-0 md:w-72 bg-slate-900 rounded-2xl p-6 text-white flex flex-col justify-center relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                    </div>
+
+                    <p class="text-slate-400 text-xs uppercase tracking-wider font-semibold mb-2">Estimated Monthly
+                        Savings</p>
+                    <p class="text-4xl font-display font-bold text-primary-400 mb-1" id="savings-result">$17,500</p>
+                    <p class="text-slate-500 text-sm mb-6">per month vs traditional</p>
+
+                    <div class="space-y-3 pt-6 border-t border-slate-800">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-400">Annual Savings</span>
+                            <span class="font-bold text-white" id="annual-savings">$210,000</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-slate-400">Call Volume</span>
+                            <span class="font-bold text-green-400 flex items-center gap-1"><i
+                                    class="ph-bold ph-trend-up"></i> 10x</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 mt-8 text-sm max-w-2xl mx-auto">
+                *Estimates based on replacing manual dialing with CallView's AI automation ($500/user/mo).
+                Actual results may vary based on your specific operational costs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // --- ROI Calculator Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const sdrInput = document.getElementById('sdr-input');
+            const salaryInput = document.getElementById('salary-input');
+
+            const sdrDisplay = document.getElementById('sdr-display');
+            const salaryDisplay = document.getElementById('salary-display');
+
+            const savingsResult = document.getElementById('savings-result');
+            const annualResult = document.getElementById('annual-savings');
+
+            const CALLVIEW_COST_PER_USER = 500;
+
+            function formatCurrency(num) {
+                return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(num);
+            }
+
+            function calculateROI() {
+                const sdrCount = parseInt(sdrInput.value);
+                const avgSalary = parseInt(salaryInput.value);
+
+                // Update input displays
+                sdrDisplay.textContent = `${sdrCount} SDR${sdrCount > 1 ? 's' : ''}`;
+                salaryDisplay.textContent = `${formatCurrency(avgSalary)}/mo`;
+
+                // Calculation:
+                // Traditional Cost = SDRs * AvgSalary
+                // CallView Cost = SDRs * $500
+                // Savings = Traditional - CallView
+
+                const traditionalCost = sdrCount * avgSalary;
+                const callViewCost = sdrCount * CALLVIEW_COST_PER_USER;
+                const monthlySavings = traditionalCost - callViewCost;
+                const annualSavings = monthlySavings * 12;
+
+                // Animate Numbers (Simple text update for defined reliability)
+                savingsResult.textContent = formatCurrency(monthlySavings);
+                annualResult.textContent = formatCurrency(annualSavings);
+            }
+
+            // Event Listeners
+            sdrInput.addEventListener('input', calculateROI);
+            salaryInput.addEventListener('input', calculateROI);
+
+            // Initial Calculate
+            calculateROI();
+        });
+
+        // --- Mobile Menu Logic (Global) ---
+        // Note: For production, this should be in a separate .js file, but inlined for portable speed here.
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                // Open
+                menu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                // Close
+                menu.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-8 mb-4 md:mb-0">
+                    </div>
+                    <p class="text-sm">The Human-in-the-Loop AI Voice Platform.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-primary-400">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400">Pricing</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+                        <li><a href="partner-program.html" class="hover:text-primary-400">Partner Program</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary-400">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-sm flex justify-between items-center">
+                <span>&copy; 2026 CallView AI. All rights reserved.</span>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/callview" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-linkedin-logo text-xl hover:text-white cursor-pointer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

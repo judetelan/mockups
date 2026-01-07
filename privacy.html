@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - CallView AI</title>
+    <meta name="description"
+        content="Privacy Policy for CallView, the human-in-the-loop AI voice platform by TPH Business Consultancy Services. Learn how we protect your data.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff0f7',
+                            100: '#ffe3f1',
+                            200: '#ffc7e3',
+                            300: '#ff9bc9',
+                            400: '#ff5da6',
+                            500: '#ff0080',
+                            600: '#e6006c',
+                            700: '#cc0058',
+                            800: '#a80548',
+                            900: '#8c093f',
+                        },
+                        slate: {
+                            850: '#15202e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(255, 0, 128, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body
+    class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-white dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528264dbb1b357c29f522f.png"
+                            alt="CallView" class="h-10 block dark:hidden">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-10 hidden dark:block">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="solutions.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Solutions</a>
+                    <a href="features.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Features</a>
+                    <a href="pricing.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Pricing</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">About</a>
+                    <a href="faq.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">FAQ</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="login.html"
+                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-primary-600">Login</a>
+                    <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                        class="bg-slate-900 dark:bg-white hover:bg-slate-800 dark:hover:bg-slate-200 text-white dark:text-slate-900 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap">
+                        Book Demo
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-700 dark:text-white hover:text-primary-500 p-2 focus:outline-none">
+                        <i class="ph ph-list text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl md:hidden animate-fade-in-down h-[calc(100vh-80px)] overflow-y-auto pb-20 z-50">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Home</a>
+                <a href="solutions.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Solutions</a>
+                <a href="features.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Features</a>
+                <a href="pricing.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Pricing</a>
+                <a href="about.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">About</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">FAQ</a>
+                <hr class="border-slate-100 dark:border-slate-800 my-2">
+                <a href="login.html"
+                    class="block px-4 py-3 text-lg font-medium text-slate-600 dark:text-slate-400">Login</a>
+                <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                    class="block px-4 py-3 bg-primary-600 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-500/30">Book
+                    Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900 pt-32 lg:pt-48">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">
+                Privacy Policy
+            </h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">Last updated: December 2025</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="py-20 bg-white dark:bg-slate-950">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="prose prose-slate dark:prose-invert max-w-none">
+
+                <div class="border-b border-slate-200 dark:border-slate-800 pb-8 mb-12">
+                    <p class="text-sm font-mono text-slate-500 dark:text-slate-400 mb-2">EFFECTIVE DATE: JANUARY 08,
+                        2026</p>
+                    <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Global Privacy Policy</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300">
+                        This Privacy Policy describes the comprehensive data governance framework operated by
+                        <strong>CallView AI Inc.</strong> ("Company") regarding the collection, use, Entitlement, and
+                        processing of personal and business data.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 1: SCOPE & ENTITLEMENT -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 1: Scope & Operational Entitlement</h2>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">1.1 Usage Entitlement</h3>
+                    <p class="mb-4">
+                        By accessing the Service, You affirmatively grant Company an irrevocable, worldwide,
+                        royalty-free right and entitlement to monitor, analyze, and record Your usage of the Platform
+                        ("Usage Entitlement"). This Entitlement is fundamental to the provision of the Service and is
+                        exercised for the purposes of: (a) verifying compliance with usage limits; (b) detecting
+                        security anomalies; (c) enforcing billing obligations; and (d) optimizing resource allocation
+                        for the multi-tenant architecture.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">1.2 Application of Policy</h3>
+                    <p class="mb-4">
+                        This Policy applies to:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li><strong>Authorized Users:</strong> Individuals registered to use the SaaS platform.</li>
+                        <li><strong>Conversation Participants:</strong> Individuals who interact with our AI agents via
+                            telephony.</li>
+                        <li><strong>Website Visitors:</strong> Individuals navigating our digital properties.</li>
+                    </ul>
+                </div>
+
+                <!-- ARTICLE 2: DATA COLLECTION FRAMEWORK -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 2: Data Collection Framework</h2>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">A. Explicitly Provided Data</h4>
+                            <ul class="text-sm space-y-2 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start"><span class="mr-2">•</span>Account Registration (Identity,
+                                    Billing)</li>
+                                <li class="flex items-start"><span class="mr-2">•</span>Campaign Configuration (Scripts,
+                                    Rules)</li>
+                                <li class="flex items-start"><span class="mr-2">•</span>Customer CRM Data (via API/Sync)
+                                </li>
+                                <li class="flex items-start"><span class="mr-2">•</span>Voice Samples (for Cloning
+                                    features)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white mb-2">B. Automatically Collected Data
+                            </h4>
+                            <ul class="text-sm space-y-2 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start"><span class="mr-2">•</span>Telephony Metadata (Duration,
+                                    Disposition)</li>
+                                <li class="flex items-start"><span class="mr-2">•</span>Infrastructure Logs (IP,
+                                    Latency, Errors)</li>
+                                <li class="flex items-start"><span class="mr-2">•</span>Audio Recordings & Transcripts
+                                </li>
+                                <li class="flex items-start"><span class="mr-2">•</span>Coaching Interactions &
+                                    Interventions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">2.1 Voice Data Specifics</h3>
+                    <p class="mb-4">
+                        We collect and process audio recordings of calls made through our system. These recordings are
+                        processed by third-party transcription and inference engines (e.g., Vapi.ai, OpenAI). By using
+                        the Service, You explicitly authorize this processing chain and warrant that You have obtained
+                        all necessary third-party consents for such recording.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 3: USAGE & PROCESSING PURPOSES -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 3: Processing Purposes & Legal Basis</h2>
+
+                    <p class="mb-4">
+                        We process Data under the following legal bases:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li><strong>Contractual Necessity:</strong> To deliver the AI calling functionality, execute
+                            campaigns, and provide real-time coaching tools.</li>
+                        <li><strong>Legitimate Business Interest:</strong> To ensure platform security, prevent fraud
+                            (e.g. "toll fraud"), bill accurate usage fees, and improve platform latency/reliability.
+                        </li>
+                        <li><strong>Legal Obligation:</strong> To comply with telecommunications regulations (e.g.
+                            Traceback requests) and tax requirements.</li>
+                    </ul>
+
+                    <div
+                        class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-4 border border-blue-100 dark:border-blue-800">
+                        <h4 class="font-bold text-blue-800 dark:text-blue-300 text-sm uppercase mb-2">Enterprise
+                            Firewalling</h4>
+                        <p class="text-blue-900 dark:text-blue-200 text-sm">
+                            We do <strong>not</strong> use Your proprietary Customer Data (e.g., your specific list of
+                            leads or your custom closing scripts) to train our foundational models for the benefit of
+                            other customers. Your "Secret Sauce" remains isolated to Your Tenant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 4: DISCLOSURE & SUB-PROCESSORS -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 4: Disclosure Chain & Sub-Processors</h2>
+                    <p class="mb-4">
+                        To provide the Service at scale, we transfer data to specific infrastructure providers. You
+                        acknowledge and agree to the following data processing chain:
+                    </p>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm mb-6">
+                            <thead class="bg-slate-100 dark:bg-slate-900">
+                                <tr>
+                                    <th class="p-3 font-bold border-b dark:border-slate-800">Category</th>
+                                    <th class="p-3 font-bold border-b dark:border-slate-800">Provider(s)</th>
+                                    <th class="p-3 font-bold border-b dark:border-slate-800">Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-slate-800">
+                                    <td class="p-3">Infrastructure</td>
+                                    <td class="p-3">AWS, GCP</td>
+                                    <td class="p-3">Hosting, Compute, Storage</td>
+                                </tr>
+                                <tr class="border-b dark:border-slate-800">
+                                    <td class="p-3">AI Inference</td>
+                                    <td class="p-3">Vapi.ai, OpenAI</td>
+                                    <td class="p-3">Voice Synthesis, LLM Processing</td>
+                                </tr>
+                                <tr class="border-b dark:border-slate-800">
+                                    <td class="p-3">Telephony</td>
+                                    <td class="p-3">Twilio, Bandwidth</td>
+                                    <td class="p-3">PSTN Connectivity</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">Payment</td>
+                                    <td class="p-3">Stripe, PayMongo</td>
+                                    <td class="p-3">PCI-DSS Compliant Billing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 5: INTERNATIONAL TRANSFERS -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 5: International Data Sovereignty</h2>
+                    <p class="mb-4">
+                        CallView AI Inc. is a Delaware Corporation with operations in the United States and the
+                        Philippines. You acknowledge that Your Data will be transferred to, processed, and stored in the
+                        United States.
+                    </p>
+                    <p class="mb-4">
+                        For Customers in the EEA, UK, or Switzerland, we execute <strong>Standard Contractual Clauses
+                            (SCCs)</strong> to validate these transfers under GDPR. We implement supplementary measures
+                        including encryption-at-rest and strict access controls to ensure data protection equivalent to
+                        stringent European standards.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 6: SECURITY POSTURE -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 6: Security Posture</h2>
+                    <p class="mb-4">
+                        We maintain a comprehensive information security program designed to protect the integrity of
+                        Your Data. Key controls include:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2 mb-4">
+                        <li><strong>Encryption:</strong> TLS 1.2+ for all data in transit; AES-256 for data at rest.
+                        </li>
+                        <li><strong>Access Control:</strong> Strict Role-Based Access Control (RBAC) and Multi-Factor
+                            Authentication (MFA) for all administrative access.</li>
+                        <li><strong>Monitoring:</strong> 24/7 automated monitoring of infrastructure for intrusion
+                            attempts and DDoS attacks.</li>
+                        <li><strong>Segregation:</strong> Logical tenant isolation to prevent data commingling.</li>
+                    </ul>
+                </div>
+
+                <!-- ARTICLE 7: DATA SUBJECT RIGHTS -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 7: Data Subject Rights</h2>
+                    <p class="mb-4">
+                        Depending on your jurisdiction (e.g., CCPA for California, GDPR for EU, DPA for Philippines),
+                        you may have specific rights regarding your personal information:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="p-4 border border-slate-200 dark:border-slate-800 rounded">
+                            <h5 class="font-bold mb-2">Right to Know/Access</h5>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Request details on the specific pieces
+                                of data we hold about you.</p>
+                        </div>
+                        <div class="p-4 border border-slate-200 dark:border-slate-800 rounded">
+                            <h5 class="font-bold mb-2">Right to Delete</h5>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Request deletion of personal data
+                                (subject to our legal retention obligations).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARTICLE 8: PHILIPPINES DPA -->
+                <div class="mb-14">
+                    <h2
+                        class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                        Article 8: Philippines Data Privacy Act</h2>
+                    <p class="mb-4">
+                        For data subjects in the Philippines, we fully adhere to the <strong>Data Privacy Act of 2012
+                            (Republic Act No. 10173)</strong>. We respect your rights to information, object, access,
+                        rectification, erasure or blocking, and damages. Our Data Protection Officer (DPO) oversees
+                        <!-- ARTICLE 9: SERVICE PARTNER DATA PROTOCOLS -->
+                    <div class="mb-14">
+                        <h2
+                            class="text-2xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wide border-l-4 border-primary-500 pl-4">
+                            Article 9: Service Partner Data Protocols</h2>
+                        <p
+                            class="mb-6 text-sm italic bg-slate-100 dark:bg-slate-900 p-4 rounded border-l-4 border-slate-400">
+                            <strong>Applicability:</strong> These protocols apply specifically to "Authorized Service
+                            Partners" (Human Pilots) accessing the platform to fulfill client campaigns.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">9.1 Data Sovereignty</h3>
+                        <p class="mb-4">
+                            Service Partners acknowledge that all Data (including Lead Lists, Audio Recordings, Call
+                            Transcripts, and Enriched Notes) accessed or generated via the Platform is the **Exclusive
+                            Property of CallView AI**. Partners have no ownership rights to this data and are strictly
+                            prohibited from exporting, copying, or using it for any purpose other than authorized
+                            CallView
+                            fulfillment.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">9.2 "Clean Desk" & Data
+                            Destruction</h3>
+                        <p class="mb-4">
+                            Upon termination of the Service Partner Agreement, the Partner must certify the
+                            **irreversible destruction** of any local data caches, downloaded reports, or offline copies
+                            of Client information. Retention of CallView data for use with other clients constitutes
+                            data theft and will be prosecuted.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">9.3 The PII "Red Line"
+                        </h3>
+                        <p class="mb-4">
+                            <strong>Zero Tolerance Policy:</strong> Service Partners are technically restricted and
+                            contractually prohibited from soliciting or recording sensitive financial PII (Credit Card
+                            Numbers, Social Security Numbers) over the voice channel. Any attempt to solicit this data
+                            is a "Fatal 5" violation resulting in immediate termination.
+                        </p>
+
+                        <h3 class="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">9.4 Communication Channels
+                        </h3>
+                        <p class="mb-4">
+                            To ensure a complete audit trail and data security, Partners are strictly prohibited from
+                            contacting Clients or Leads via personal / unmonitored channels (e.g., Personal WhatsApp,
+                            Facebook Messenger, Personal Email). All extensive data exchange must occur within the
+                            authorized secure channels (Platform or Official Discord).
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="mt-20 border-t border-slate-200 dark:border-slate-800 pt-10">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Privacy Office Contact</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-2">
+                            To exercise rights or report privacy concerns, email our Data Protection Officer:
+                        </p>
+                        <p class="font-mono text-primary-600 dark:text-primary-400">privacy@callview.ai</p>
+
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-8 mb-4 md:mb-0">
+                    </div>
+                    <p class="text-sm">The Human-in-the-Loop AI Voice Platform.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-primary-400">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400">Pricing</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+                        <li><a href="partner-program.html" class="hover:text-primary-400">Partner Program</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary-400">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-sm flex justify-between items-center">
+                <span>&copy; 2026 CallView AI. All rights reserved.</span>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/callview" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-linkedin-logo text-xl hover:text-white cursor-pointer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="69419ea219ffe9ae99e11be8">
+        </script>
+</body>
+
+</html>

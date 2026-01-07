@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - CallView | The Power of Human-Supervised AI</title>
+    <meta name="description"
+        content="Discover CallView's powerful features: Live Coaching Console, CRM Integration, Real-time Analytics, and TCPA Compliance built-in.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff0f7',
+                            100: '#ffe3f1',
+                            200: '#ffc7e3',
+                            300: '#ff9bc9',
+                            400: '#ff5da6',
+                            500: '#ff0080',  /* HOT PINK CORE */
+                            600: '#e6006c',
+                            700: '#cc0058',
+                            800: '#a80548',
+                            900: '#8c093f',
+                        },
+                        slate: {
+                            850: '#15202e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(255, 0, 128, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body
+    class="bg-white dark:bg-slate-900 dark:bg-slate-950 text-slate-900 dark:text-white dark:text-white font-sans antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 transition-all duration-300 bg-white dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528264dbb1b357c29f522f.png"
+                            alt="CallView" class="h-10 block dark:hidden">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-10 hidden dark:block">
+                    </a>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="solutions.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Solutions</a>
+                    <a href="features.html" class="text-sm font-medium text-primary-600 transition">Features</a>
+                    <a href="pricing.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">Pricing</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">About</a>
+                    <a href="faq.html"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-600 transition">FAQ</a>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="login.html" class="text-sm font-semibold text-slate-700 hover:text-primary-600">Login</a>
+                    <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                        class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        Book Demo
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-700 hover:text-primary-500 p-2 focus:outline-none">
+                        <i class="ph ph-list text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl md:hidden animate-fade-in-down h-[calc(100vh-80px)] overflow-y-auto pb-20 z-50">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary-600 transition">Home</a>
+                <a href="solutions.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">Solutions</a>
+                <a href="features.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-primary-600 dark:text-primary-500 bg-primary-50 dark:bg-primary-900/10 transition">Features</a>
+                <a href="pricing.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">Pricing</a>
+                <a href="about.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">About</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 rounded-lg text-lg font-medium text-slate-700 hover:bg-slate-50 dark:bg-slate-950 hover:text-primary-600 transition">FAQ</a>
+                <hr class="border-slate-100 dark:border-slate-800 my-2">
+                <a href="login.html"
+                    class="block px-4 py-3 text-lg font-medium text-slate-600 dark:text-slate-400">Login</a>
+                <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                    class="block px-4 py-3 bg-primary-600 text-center text-white rounded-xl font-bold shadow-lg shadow-primary-500/30">Book
+                    Demo</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+
+    <!-- Features Hero -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900 text-white">
+        <!-- Background Glow -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-600/20 rounded-full blur-3xl opacity-50 pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-primary-400 text-sm font-medium mb-6">
+                <i class="ph-fill ph-sparkle"></i> Platform Overview
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-bold mb-8 tracking-tight">
+                Superpowers for <br> <span class="text-primary-500">Sales Teams</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                CallView isn't just a dialer. It's a complete command center that combines 10x AI scale with human
+                judgment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Feature 1: Live Console -->
+    <section class="py-24 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div>
+                    <div
+                        class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-6">
+                        <i class="ph-fill ph-monitor-play text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Live Coaching
+                        Console</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        The "God Mode" for your sales floor. Watch 10 conversations at once. Real-time transcription and
+                        sentiment analysis tell you exactly where to focus.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Real-Time Transcription</h4>
+                                <p class="text-slate-500 text-sm">See every word as it happens. Zero latency.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Sentiment Heatmap</h4>
+                                <p class="text-slate-500 text-sm">Green means good. Red means intervene. Real-time
+                                    visual
+                                    cues.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">One-Click Coaching</h4>
+                                <p class="text-slate-500 text-sm">Type a response and the AI delivers it immediately.
+                                    The AI learns from your coaching.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">One-Click Takeover</h4>
+                                <p class="text-slate-500 text-sm">Jump into any call seamlessly to close the deal
+                                    yourself.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Visual -->
+                <div
+                    class="relative rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-8 shadow-2xl skew-y-1">
+                    <!-- Console UI Mock -->
+                    <div class="space-y-4">
+                        <div
+                            class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                                <span class="font-bold text-slate-700">Agent #1 • Discovery</span>
+                            </div>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Positive</span>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                                <span class="font-bold text-slate-700">Agent #2 • Opening</span>
+                            </div>
+                            <span
+                                class="text-xs bg-slate-100 text-slate-600 dark:text-slate-400 px-2 py-1 rounded">Neutral</span>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-4 rounded-xl border-l-4 border-red-500 shadow-md flex items-center justify-between scale-105">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                                <span class="font-bold text-slate-900 dark:text-white">Agent #3 • Objection</span>
+                            </div>
+                            <button
+                                class="bg-red-500 text-white text-xs px-3 py-1.5 rounded hover:bg-red-600 font-bold shadow-lg shadow-red-500/30">TAKE
+                                OVER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 2: Integrations -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Visual -->
+                <div class="order-2 md:order-1 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center h-40">
+                            <i class="ph-fill ph-salesforce-logo text-5xl text-[#00A1E0] mb-2"></i>
+                            <span class="font-bold text-slate-700">Salesforce</span>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center h-40 mt-8">
+                            <i class="ph-fill ph-hubspot-logo text-5xl text-[#FF7A59] mb-2"></i>
+                            <span class="font-bold text-slate-700">HubSpot</span>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center h-40 -mt-8">
+                            <span class="text-4xl font-bold text-slate-800">Zapier</span>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center h-40">
+                            <span class="text-[40px] leading-none">🔧</span>
+                            <span class="font-bold text-slate-700 mt-2">ServiceTitan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div class="order-1 md:order-2">
+                    <div
+                        class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-6">
+                        <i class="ph-fill ph-arrows-merge text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Seamless Sync</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        Stop copy-pasting. CallView lives inside your existing ecosystem. We push calls, recordings, and
+                        notes to your CRM automatically.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Bi-Directional Sync</h4>
+                                <p class="text-slate-500 text-sm">New leads from CRM → CallView. Call outcomes → CRM.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Calendar Automation</h4>
+                                <p class="text-slate-500 text-sm">When AI books a meeting, it appears on your
+                                    Google/Outlook calendar automatically.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Smart Task Creation</h4>
+                                <p class="text-slate-500 text-sm">Callbacks and follow-ups automatically create tasks
+                                    for your team.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 3: Analytics -->
+    <section class="py-24 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div>
+                    <div
+                        class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-6">
+                        <i class="ph-fill ph-chart-line-up text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Real-Time Analytics
+                    </h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        Know exactly what's working. Track every metric that matters regarding call volume, conversion
+                        rates, and ROI.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">Campaign Performance</h4>
+                                <p class="text-slate-500 text-sm">Track contact rates, qualified leads, and booked
+                                    meetings in real-time.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">ROI Calculator</h4>
+                                <p class="text-slate-500 text-sm">See your exact cost per meeting and pipeline revenue
+                                    generated.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <i class="ph-fill ph-check-circle text-primary-500 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white">A/B Testing</h4>
+                                <p class="text-slate-500 text-sm">Test different scripts and objection handlers to
+                                    optimize performance.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Visual -->
+                <div
+                    class="relative rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-8 shadow-2xl skew-y-1">
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-600 dark:text-slate-400">Total Calls Made</span>
+                                <span class="font-bold text-primary-600">847</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3">
+                                <div class="bg-primary-500 h-3 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-600 dark:text-slate-400">Contact Rate</span>
+                                <span class="font-bold text-primary-600">62%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3">
+                                <div class="bg-primary-400 h-3 rounded-full" style="width: 62%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-600 dark:text-slate-400">Qualified Leads</span>
+                                <span class="font-bold text-primary-600">189</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3">
+                                <div class="bg-primary-500 h-3 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-600 dark:text-slate-400">Appointments Booked</span>
+                                <span class="font-bold text-primary-600">47</span>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-3">
+                                <div class="bg-slate-800 dark:bg-slate-700 h-3 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 4: Compliance -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm font-medium mb-6">
+                    <i class="ph-fill ph-shield-check"></i> Built-In Protection
+                </div>
+                <h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">TCPA Compliance & Ethics
+                </h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                    CallView keeps you compliant by design. Every call is monitored, recorded, and properly tracked.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-8 border border-slate-100 dark:border-slate-800 hover:border-primary-200 dark:hover:border-primary-900 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-clock text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Time-of-Day Enforcement</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Calls only go out 8am-9pm in the
+                        prospect's local time zone. System blocks out-of-hours dialing automatically.</p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-8 border border-slate-100 dark:border-slate-800 hover:border-primary-200 dark:hover:border-primary-900 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-list-dashes text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">DNC List Scrubbing</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">All numbers are automatically scrubbed
+                        against the National DNC Registry before they enter your call queue.</p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-8 border border-slate-100 dark:border-slate-800 hover:border-primary-200 dark:hover:border-primary-900 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-user-focus text-2xl text-slate-600 dark:text-slate-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Human Oversight</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Every AI call has a human watching. If
+                        the AI goes off-script, your SDR catches it in real-time and corrects.</p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-8 border border-slate-100 dark:border-slate-800 hover:border-primary-200 dark:hover:border-primary-900 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-prohibit text-2xl text-orange-600 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Automated Opt-Out Processing</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">One-click DNC marking. When someone
+                        says "remove me," they're off the list company-wide within seconds.</p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-8 border border-slate-100 dark:border-slate-800 hover:border-primary-200 dark:hover:border-primary-900 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-circles-three-plus text-2xl text-red-600 dark:text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Full Call Recording</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Every call is recorded and stored.
+                        Complete audit trail for compliance reviews or dispute resolution.</p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl p-8 border border-slate-100 dark:border-slate-800 hover:border-primary-200 dark:hover:border-primary-900 transition-colors">
+                    <div
+                        class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-chat-text text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Disclosure Options</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Choose transparent disclosure ("I'm an
+                        AI assistant") or natural conversation. You control the approach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-900/30 rounded-full blur-[100px]">
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                See These Features in Action
+            </h2>
+            <p class="text-xl mb-12 text-slate-300">
+                Book a 15-minute demo and see how CallView's features work for your specific use case.
+            </p>
+            <a href="https://link.tambayanph.com/widget/booking/9RuXYc78LL1c3tRqK4m3"
+                class="inline-block bg-primary-600 hover:bg-primary-500 text-white font-bold py-4 px-12 rounded-xl shadow-glow transition-all hover:-translate-y-1 text-lg">
+                Book Your Demo
+            </a>
+            <p class="mt-6 text-slate-400">Or email us at <a href="mailto:emil@callview.ai"
+                    class="underline hover:text-white">emil@callview.ai</a></p>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/0As1PUm7bGRR4XNovIfZ/media/69528f88fc2270f2ac39bdf0.png"
+                            alt="CallView" class="h-8 mb-4 md:mb-0">
+                    </div>
+                    <p class="text-sm">The Human-in-the-Loop AI Voice Platform.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-primary-400">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary-400">Pricing</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-primary-400">About Us</a></li>
+                        <li><a href="partner-program.html" class="hover:text-primary-400">Partner Program</a></li>
+                        <li><a href="faq.html" class="hover:text-primary-400">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="hover:text-primary-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary-400">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-sm flex justify-between items-center">
+                <span>&copy; 2026 CallView AI. All rights reserved.</span>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/callview" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-linkedin-logo text-xl hover:text-white cursor-pointer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
