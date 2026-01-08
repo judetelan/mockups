@@ -370,16 +370,21 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-primary-200 transition-colors group">
+                    class="relative overflow-hidden p-8 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-primary-200 transition-colors group">
+                    <!-- Hover Blur Effect -->
                     <div
-                        class="w-14 h-14 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm mb-6 text-primary-600 group-hover:text-primary-500 group-hover:scale-110 transition-all duration-300">
+                        class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl pointer-events-none">
+                    </div>
+
+                    <div
+                        class="relative z-10 w-14 h-14 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm mb-6 text-primary-600 group-hover:text-primary-500 group-hover:scale-110 transition-all duration-300">
                         <i class="ph-fill ph-shield-check text-3xl"></i>
                     </div>
                     <h3
-                        class="text-xl font-bold font-display text-slate-900 dark:text-white mb-3 min-h-[56px] flex items-center">
+                        class="relative z-10 text-xl font-bold font-display text-slate-900 dark:text-white mb-3 min-h-[56px] flex items-center">
                         TCPA Compliance
                         Shield</h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p class="relative z-10 text-slate-600 dark:text-slate-400 leading-relaxed">
                         Don't risk fines. Our platform enforces 10DLC registration, DNC checks, and recording consent
                         automatically.
                     </p>
@@ -387,16 +392,21 @@
 
                 <!-- Feature 2 -->
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-primary-200 transition-colors group">
+                    class="relative overflow-hidden p-8 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-primary-200 transition-colors group">
+                    <!-- Hover Blur Effect -->
                     <div
-                        class="w-14 h-14 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm mb-6 text-primary-600 group-hover:text-primary-500 group-hover:scale-110 transition-all duration-300">
+                        class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl pointer-events-none">
+                    </div>
+
+                    <div
+                        class="relative z-10 w-14 h-14 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm mb-6 text-primary-600 group-hover:text-primary-500 group-hover:scale-110 transition-all duration-300">
                         <i class="ph-fill ph-headset text-3xl"></i>
                     </div>
                     <h3
-                        class="text-xl font-bold font-display text-slate-900 dark:text-white mb-3 min-h-[56px] flex items-center">
+                        class="relative z-10 text-xl font-bold font-display text-slate-900 dark:text-white mb-3 min-h-[56px] flex items-center">
                         Seamless Human
                         Takeover</h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p class="relative z-10 text-slate-600 dark:text-slate-400 leading-relaxed">
                         The moment a lead shows interest or confusion, your SDR can click "Takeover" to jump into the
                         call seamlessly.
                     </p>
@@ -404,16 +414,21 @@
 
                 <!-- Feature 3 -->
                 <div
-                    class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-primary-200 transition-colors group">
+                    class="relative overflow-hidden p-8 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-primary-200 transition-colors group">
+                    <!-- Hover Blur Effect -->
                     <div
-                        class="w-14 h-14 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm mb-6 text-primary-600 group-hover:text-primary-500 group-hover:scale-110 transition-all duration-300">
+                        class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl pointer-events-none">
+                    </div>
+
+                    <div
+                        class="relative z-10 w-14 h-14 bg-white dark:bg-slate-900 rounded-xl flex items-center justify-center shadow-sm mb-6 text-primary-600 group-hover:text-primary-500 group-hover:scale-110 transition-all duration-300">
                         <i class="ph-fill ph-lightning text-3xl"></i>
                     </div>
                     <h3
-                        class="text-xl font-bold font-display text-slate-900 dark:text-white mb-3 min-h-[56px] flex items-center">
+                        class="relative z-10 text-xl font-bold font-display text-slate-900 dark:text-white mb-3 min-h-[56px] flex items-center">
                         10x Volume Multiplier
                     </h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p class="relative z-10 text-slate-600 dark:text-slate-400 leading-relaxed">
                         Stop wasting time on ringtones. AI handles the dialing and gatekeepers. You only talk to
                         decision makers.
                     </p>
