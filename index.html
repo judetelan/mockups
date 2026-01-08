@@ -186,24 +186,35 @@
             <div class="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800">
                 <p class="text-sm font-medium text-slate-400 mb-6 uppercase tracking-wider">Trusted by modern sales
                     teams using</p>
-                <div
-                    class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8">
 
                     <!-- Salesforce -->
-                    <img src="https://cdn.brandfetch.io/salesforce.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT"
-                        alt="Salesforce" class="h-8 md:h-12 w-auto object-contain" />
+                    <div
+                        class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm hover:scale-105 transition-transform">
+                        <img src="https://cdn.brandfetch.io/salesforce.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT"
+                            alt="Salesforce" class="h-8 w-auto object-contain" />
+                    </div>
 
                     <!-- HubSpot -->
-                    <img src="https://cdn.brandfetch.io/hubspot.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT" alt="HubSpot"
-                        class="h-8 md:h-10 w-auto object-contain" />
+                    <div
+                        class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm hover:scale-105 transition-transform">
+                        <img src="https://cdn.brandfetch.io/hubspot.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT" alt="HubSpot"
+                            class="h-8 w-auto object-contain" />
+                    </div>
 
                     <!-- Pipedrive -->
-                    <img src="https://cdn.brandfetch.io/pipedrive.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT" alt="Pipedrive"
-                        class="h-7 md:h-8 w-auto object-contain" />
+                    <div
+                        class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm hover:scale-105 transition-transform">
+                        <img src="https://cdn.brandfetch.io/pipedrive.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT"
+                            alt="Pipedrive" class="h-8 w-auto object-contain" />
+                    </div>
 
                     <!-- GoHighLevel -->
-                    <img src="https://cdn.brandfetch.io/gohighlevel.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT"
-                        alt="HighLevel" class="h-8 md:h-10 w-auto object-contain" />
+                    <div
+                        class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm hover:scale-105 transition-transform">
+                        <img src="https://cdn.brandfetch.io/gohighlevel.com/w/200/h/200?c=1idfe55aQBTQ3uf7FNT"
+                            alt="HighLevel" class="h-8 w-auto object-contain" />
+                    </div>
 
                 </div>
             </div>
@@ -250,28 +261,13 @@
                         </div>
 
                         <!-- Main Grid - Interactive Zone -->
-                        <!-- Group wrapper to handle peer interactions -->
-                        <div
-                            class="col-span-12 md:col-span-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 group/hero">
-
-                            <!-- Live Call Card 1 (Active) - Sentiment Feature -->
-                            <div
-                                class="relative bg-slate-900 rounded-xl p-4 border border-slate-700/50 transition-all duration-300 group/card hover:scale-[1.08] hover:border-primary-500 hover:shadow-2xl hover:shadow-primary-500/30 hover:z-20 opacity-50 hover:opacity-100">
-
-                                <!-- Feature Reveal Label -->
-                                <div
-                                    class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-bold px-3 py-1.5 rounded-full opacity-0 -translate-y-2 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-300 shadow-glow whitespace-nowrap z-50 pointer-events-none">
-                                    ✨ Real-Time Sentiment Analysis
-                                    <div
-                                        class="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 bg-primary-600 rotate-45">
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="absolute inset-0 bg-primary-500/0 group-hover/card:bg-primary-500/5 transition duration-300 rounded-xl">
-                                </div>
-
-                                <div class="relative z-10">
+                        <div class="col-span-12 md:col-span-10 relative">
+                            <!-- Base Dashboard Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 transition-all duration-500"
+                                id="hero-dashboard-base">
+                                <!-- Card 1: Agent 04 -->
+                                <div class="bg-slate-900 rounded-xl p-4 border border-slate-700/50 dashboard-card"
+                                    id="card-1">
                                     <div class="flex justify-between items-start mb-4">
                                         <div class="flex items-center gap-2">
                                             <div
@@ -286,48 +282,21 @@
                                             class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded border border-green-500/30">
                                             Positive</div>
                                     </div>
-                                    <!-- Waveform -->
                                     <div class="flex items-center gap-1 h-8 mb-4">
                                         <div class="w-1 bg-primary-500/50 h-3 animate-pulse"></div>
                                         <div class="w-1 bg-primary-500/80 h-6 animate-pulse"
-                                            style="animation-delay: 0.1s">
-                                        </div>
+                                            style="animation-delay: 0.1s"></div>
                                         <div class="w-1 bg-primary-500 h-4 animate-pulse" style="animation-delay: 0.2s">
                                         </div>
                                         <div class="w-1 bg-primary-500/60 h-7 animate-pulse"
-                                            style="animation-delay: 0.3s">
-                                        </div>
+                                            style="animation-delay: 0.3s"></div>
                                         <div class="w-1 bg-primary-500/40 h-3 animate-pulse"
-                                            style="animation-delay: 0.4s">
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-2">
-                                        <button
-                                            class="flex-1 py-1.5 text-xs font-medium bg-slate-800 hover:bg-slate-700 text-white rounded border border-slate-700">Listen</button>
-                                        <button
-                                            class="flex-1 py-1.5 text-xs font-medium bg-red-500/10 hover:bg-red-500/20 text-red-500 rounded border border-red-500/50">Takeover</button>
+                                            style="animation-delay: 0.4s"></div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Live Call Card 2 - Parallel Dialing Feature -->
-                            <div
-                                class="relative bg-slate-900 rounded-xl p-4 border border-slate-700/50 transition-all duration-300 group/card hover:scale-[1.08] hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:z-20 opacity-50 hover:opacity-100">
-
-                                <!-- Feature Reveal Label -->
-                                <div
-                                    class="absolute -top-12 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1.5 rounded-full opacity-0 -translate-y-2 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-300 shadow-lg whitespace-nowrap z-50 pointer-events-none">
-                                    🚀 10x Parallel Dialing
-                                    <div
-                                        class="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 bg-blue-500 rotate-45">
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="absolute inset-0 bg-blue-500/0 group-hover/card:bg-blue-500/5 transition duration-300 rounded-xl">
-                                </div>
-
-                                <div class="relative z-10">
+                                <!-- Card 2: Agent 07 -->
+                                <div class="bg-slate-900 rounded-xl p-4 border border-slate-700/50 dashboard-card"
+                                    id="card-2">
                                     <div class="flex justify-between items-start mb-4">
                                         <div class="flex items-center gap-2">
                                             <div
@@ -340,35 +309,12 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="h-8 mb-4 bg-slate-800/50 rounded w-full animate-pulse flex items-center justify-center text-[10px] text-slate-500">
+                                        class="h-8 mb-4 bg-slate-800/50 rounded w-full flex items-center justify-center text-[10px] text-slate-500">
                                         Dialing 10 leads...</div>
-                                    <div class="flex gap-2 opacity-50 pointer-events-none">
-                                        <button
-                                            class="flex-1 py-1.5 text-xs font-medium bg-slate-800 text-white rounded border border-slate-700">Listen</button>
-                                        <button
-                                            class="flex-1 py-1.5 text-xs font-medium bg-slate-800 text-white rounded border border-slate-700">Takeover</button>
-                                    </div>
                                 </div>
-                            </div>
-
-                            <!-- Live Call Card 3 - Coaching Feature -->
-                            <div
-                                class="relative bg-slate-900 rounded-xl p-4 border border-slate-700/50 transition-all duration-300 group/card hover:scale-[1.08] hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30 hover:z-20 opacity-50 hover:opacity-100">
-
-                                <!-- Feature Reveal Label -->
-                                <div
-                                    class="absolute -top-12 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full opacity-0 -translate-y-2 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-300 shadow-lg whitespace-nowrap z-50 pointer-events-none">
-                                    💡 Live Objection Coaching
-                                    <div
-                                        class="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-2 h-2 bg-orange-500 rotate-45">
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="absolute inset-0 bg-orange-500/0 group-hover/card:bg-orange-500/5 transition duration-300 rounded-xl">
-                                </div>
-
-                                <div class="relative z-10">
+                                <!-- Card 3: Agent 02 -->
+                                <div class="bg-slate-900 rounded-xl p-4 border border-slate-700/50 dashboard-card"
+                                    id="card-3">
                                     <div class="flex justify-between items-start mb-4">
                                         <div class="flex items-center gap-2">
                                             <div
@@ -388,18 +334,180 @@
                                         <div class="w-1 bg-orange-500/80 h-5"></div>
                                         <div class="w-1 bg-orange-500 h-2"></div>
                                     </div>
-                                    <div class="flex gap-2">
-                                        <button
-                                            class="flex-1 py-1.5 text-xs font-medium bg-primary-600 hover:bg-primary-500 text-white rounded shadow-lg shadow-primary-500/20">Whisper</button>
-                                        <button
-                                            class="flex-1 py-1.5 text-xs font-medium bg-slate-800 hover:bg-slate-700 text-white rounded border border-slate-700">Takeover</button>
+                                </div>
+                            </div>
+
+                            <!-- Overlays Container -->
+                            <div class="absolute inset-0 pointer-events-none" id="hero-overlays">
+                                <!-- Feature 1 Highlight (Sentiment) -->
+                                <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-[2px] transition-opacity duration-500 opacity-0 feature-highlight"
+                                    id="highlight-1">
+                                    <div class="absolute top-0 left-0 w-full md:w-1/3 h-full md:h-auto p-1">
+                                        <!-- Position match Card 1 -->
+                                        <div
+                                            class="relative w-full h-full bg-slate-900 rounded-xl border-2 border-primary-500 shadow-[0_0_30px_rgba(255,0,128,0.3)] z-20 flex flex-col p-4">
+                                            <!-- Duplicate Card 1 Content for Highlight -->
+                                            <div
+                                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                                Live Sentiment</div>
+                                            <div class="flex justify-between items-start mb-4">
+                                                <div class="flex items-center gap-2">
+                                                    <div
+                                                        class="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-white text-xs font-bold">
+                                                        AI</div>
+                                                    <div>
+                                                        <p class="text-white font-medium text-sm">Agent #04</p>
+                                                        <p class="text-primary-400 text-xs">Talking • 2:14</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded border border-green-500/30">
+                                                    Positive</div>
+                                            </div>
+                                            <div class="flex items-center gap-1 h-8 mb-4">
+                                                <div class="w-1 bg-primary-500/50 h-3 animate-pulse"></div>
+                                                <div class="w-1 bg-primary-500 h-6 animate-pulse"></div>
+                                                <div class="w-1 bg-primary-500 h-4 animate-pulse"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 2 Highlight (Parallel) -->
+                                <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-[2px] transition-opacity duration-500 opacity-0 feature-highlight"
+                                    id="highlight-2">
+                                    <div class="absolute top-0 left-0 md:left-1/3 w-full md:w-1/3 h-full md:h-auto p-1">
+                                        <!-- Position match Card 2 -->
+                                        <div
+                                            class="relative w-full h-full bg-slate-900 rounded-xl border-2 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.3)] z-20 flex flex-col p-4">
+                                            <div
+                                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                                10x Speed</div>
+                                            <div class="flex justify-between items-start mb-4">
+                                                <div class="flex items-center gap-2">
+                                                    <div
+                                                        class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center text-xs font-bold">
+                                                        AI</div>
+                                                    <div>
+                                                        <p class="text-white font-medium text-sm">Agent #07</p>
+                                                        <p class="text-slate-400 text-xs">Dialing...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="h-8 mb-4 bg-slate-800/50 rounded flex items-center justify-center text-[10px] text-slate-500">
+                                                Dialing 10 leads...</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 3 Highlight (Coaching) -->
+                                <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-[2px] transition-opacity duration-500 opacity-0 feature-highlight"
+                                    id="highlight-3">
+                                    <div class="absolute top-0 right-0 w-full md:w-1/3 h-full md:h-auto p-1">
+                                        <!-- Position match Card 3 -->
+                                        <div
+                                            class="relative w-full h-full bg-slate-900 rounded-xl border-2 border-orange-500 shadow-[0_0_30px_rgba(249,115,22,0.3)] z-20 flex flex-col p-4">
+                                            <div
+                                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                                Live Coaching</div>
+                                            <div class="flex justify-between items-start mb-4">
+                                                <div class="flex items-center gap-2">
+                                                    <div
+                                                        class="w-8 h-8 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center text-xs font-bold">
+                                                        AI</div>
+                                                    <div>
+                                                        <p class="text-white font-medium text-sm">Agent #02</p>
+                                                        <p class="text-orange-400 text-xs">Objection Handling</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs rounded border border-orange-500/30">
+                                                    Neutral</div>
+                                            </div>
+                                            <div class="flex items-center gap-1 h-8 mb-4">
+                                                <div class="w-1 bg-orange-500/50 h-3"></div>
+                                                <div class="w-1 bg-orange-500 h-5"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Feature Controls / Captions -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
+                    <!-- Control 1 -->
+                    <div class="group cursor-pointer p-4 rounded-xl border border-transparent hover:bg-slate-800/50 transition-all duration-300"
+                        onmouseenter="toggleHeroFeature(1)" onmouseleave="toggleHeroFeature(0)">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-primary-500/20 flex items-center justify-center text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                                <i class="ph-fill ph-heartbeat"></i>
+                            </div>
+                            <h3
+                                class="text-slate-900 dark:text-white font-bold text-lg group-hover:text-primary-500 transition-colors">
+                                Real-Time Sentiment</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed pl-11">Instantly see which calls are going
+                            well. Green means booked meeting.</p>
+                    </div>
+
+                    <!-- Control 2 -->
+                    <div class="group cursor-pointer p-4 rounded-xl border border-transparent hover:bg-slate-800/50 transition-all duration-300"
+                        onmouseenter="toggleHeroFeature(2)" onmouseleave="toggleHeroFeature(0)">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                                <i class="ph-fill ph-rocket"></i>
+                            </div>
+                            <h3
+                                class="text-slate-900 dark:text-white font-bold text-lg group-hover:text-blue-500 transition-colors">
+                                10x Parallel Dialing</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed pl-11">One agent manages 10 concurrent AI
+                            lines. Scale your output instantly.</p>
+                    </div>
+
+                    <!-- Control 3 -->
+                    <div class="group cursor-pointer p-4 rounded-xl border border-transparent hover:bg-slate-800/50 transition-all duration-300"
+                        onmouseenter="toggleHeroFeature(3)" onmouseleave="toggleHeroFeature(0)">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                                <i class="ph-fill ph-microphone-stage"></i>
+                            </div>
+                            <h3
+                                class="text-slate-900 dark:text-white font-bold text-lg group-hover:text-orange-500 transition-colors">
+                                Live Coaching</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed pl-11">Whisper to the AI or take over the call
+                            seamlessly if things get tough.</p>
+                    </div>
+                </div>
+
+                <script>
+                    function toggleHeroFeature(index) {
+                        // Get all highlights
+                        const highlights = document.querySelectorAll('.feature-highlight');
+
+                        // Hide all first
+                        highlights.forEach(el => {
+                            el.classList.add('opacity-0');
+                        });
+
+                        // Show specific logic
+                        if (index > 0) {
+                            const target = document.getElementById('highlight-' + index);
+                            if (target) target.classList.remove('opacity-0');
+                        }
+                    }
+                </script>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
